@@ -1,0 +1,18 @@
+.main-header{
+  background-color: rgba(22, 149, 22, 0.833);
+  padding: 1.3rem;
+}
+.ul-tag{
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+
+}
+.ul-tag li {
+  list-style: none;
+  color: white;
+  cursor: pointer;
+}
+.active{
+  color: aqua;
+}

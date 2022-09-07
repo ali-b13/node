@@ -1,0 +1,14 @@
+<%-include('../includes/Head.ejs')%>
+<%-include('../includes/Navigation.ejs') %>
+<form class="product-details " action="/cart" method="post">
+    <h2>Product Details </h2>
+    <hr>
+     <div class="card-title"> <%= data.title%></div>
+     <img class="card-img" src="<%= data.image%>"></img>
+     <div class="card-price"> price : <%= data.price%></div>
+     <div class="card-description"> Description : <%= data.description%></div>
+     <input type="hidden" name="productId" value="<%=data.id%>"/>
+     <button class="btn btn-add" type="submit">Add to Cart</button>
+</form>
+
+ <%-include('../includes/End.ejs')%>

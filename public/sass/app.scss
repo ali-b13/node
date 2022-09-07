@@ -1,0 +1,17 @@
+@import  "./product.scss";
+@import "./nav.scss";
+@import './admin.scss';
+*{
+  margin: 0;
+  padding: 0;
+}
+*::after,*::before{
+  box-sizing: border-box;
+}
+html{
+  font-size: large;
+}
+
+body{
+  font-family: 'Courier New', Courier, monospace;
+}

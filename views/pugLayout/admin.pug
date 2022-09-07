@@ -1,0 +1,12 @@
+extends layout/main-layout.pug  
+block admin
+    form.form-data(action="/registered" method="POST" ) 
+        h2.label  product name 
+            input.input(type="text" name='title')
+        h2 product image 
+            input(type="text" name="image")
+        h2 product Quantity  
+            input(type="number" name="quantity")    
+        h2 product price 
+            input(type="number" name="price")
+        button.btn-submit(type="submit")   Send 

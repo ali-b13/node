@@ -1,0 +1,20 @@
+<%-include('../includes/Head.ejs')%>
+
+  <%- include('../includes/Navigation.ejs') %>
+<form class="form-data" action="/<%if(editing){%>edit-product <%}else{%>registered<%}%>" method="POST">
+  <h3> Product Name</h3>
+  <input type="text" name="title" value="<% if (editing) {%><%=product.title%><%}%>">
+  <h3> Product image</h3>
+  <input type="text" name="image" value="<% if (editing) {%><%=product.image%><%}%>">
+  <h3> Product Quantity</h3>
+  <input type="text" name="qty" value="<% if (editing) {%><%=product.qty%><%}%>">
+  <h3> Product price</h3>
+  <input type="text" name="price" value="<% if (editing) {%><%=product.price%><%}%>">
+  <h3> Product description</h3>
+  <input type="text" name="description" value="<% if (editing) {%><%=product.description%><%}%>">
+  <% if(editing) {%>
+    <input name="id" type="hidden" value="<%=product.id%>">
+    <%}%>
+  <button class="btn-subnit" type="submit"> <% if(editing) {%> Update Product <% } else {%> Add product <% } %></button>
+</form>
+<%-include('../includes/End.ejs') %>

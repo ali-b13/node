@@ -1,0 +1,22 @@
+
+extends layout/main-layout.pug
+  
+block body 
+  .products
+   each item in data
+        .card
+            img.card-img(src =item.image, alt="")
+            .card-title  #{item.title}
+            .card-description 
+            .card-price price : #{item.price}
+            button.btn-add Add
+
+
+
+
+
+
+
+
+    
+   

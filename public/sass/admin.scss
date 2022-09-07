@@ -1,0 +1,43 @@
+.form-data{
+  display: flex;
+  width: 50%;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 2rem;
+ background-color: rgb(255, 251, 251);
+ border: 1px solid rgb(125, 124, 124);
+}
+.form-data {
+ margin: 3rem auto;
+
+}
+@media (max-width:1000px) {
+  .form-data{
+    font-size: smaller;
+    width: 80%;
+  }
+}
+@media (max-width:600px) {
+  .form-data{
+    font-size: 10px;
+    flex-wrap: wrap;
+    width: 90%;
+  }
+}
+@media (max-width:550px) {
+  .form-data{
+    font-size: 9px;
+    width: 100%;
+    overflow: hidden;
+  }
+  .form-data input{
+    width: 50%;
+    margin: 2px;
+  }
+  h2{
+    font-size: small;
+  }
+ 
+  
+}

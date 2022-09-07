@@ -1,0 +1,21 @@
+<%-include('../includes/Head.ejs')%>
+<%- include('../includes/Navigation.ejs') %>
+   <% if (data.length >0) {%>
+    <div class="products">
+      <% for( let product of data ) {%>
+       <div class="card">
+         <img class="card-img" src=<%=product.image%>>
+         <div class="card-title"><%=product.title%></div>
+         <div class="card-price price"> price : $<%=product.price%></div>
+         <form action="/cart" method="post">
+            <input type="hidden" value="<%=product.id%>" name="productId">
+            <button class="btn-add Add">Add To Cart</button>
+         </form>
+        
+
+       </div>
+       <% }%>
+    <% }  else { %>
+ <h1 style="text-align: center;"> No Products There</h1>
+    <% }%>
+<%- include('../includes/End.ejs') %>

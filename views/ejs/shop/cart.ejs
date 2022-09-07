@@ -1,0 +1,38 @@
+<%-include('../includes/Head.ejs')%>
+<%- include('../includes/Navigation.ejs') %>
+<main class="cart-container">
+<%if(arrCart.length>0) {%>
+  
+   <%arrCart.forEach(product=>{%>
+   
+    <div class="cart">
+       <img class="cart-img" src='<%=product.image%>'>
+      <div class="cart-title"><%=product.title%></div>
+      <div class="qty-container"> <div>Quantity</div> <div class="cart-qty"><%=product.cartItem.qty%></div></div>
+      <div class="price-container"><div>Price </div>  <div class="cart-price price price-qty">   $<%=product.price%> </div></div>
+      <form action="/cart-deleteItem" method="post"> 
+         <input type="hidden" value="<%=product.id%>" name="id">
+         <button class="btn btn-add" type="submit">
+  Delete
+      </button></form>
+     </div> 
+    <%})%>
+    
+    <form class="btns-form" action="cart/checkout" >
+      <button class="btn-add Add" type="submit">Check out</button>
+   </form> 
+  <%} else {%>
+    <h1>Nothing in Cart !</h1>
+    <%}%>
+        
+</main>
+ 
+<%- include('../includes/End.ejs') %>
+
+
+
+
+
+
+
+

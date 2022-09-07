@@ -1,0 +1,17 @@
+<%-include('../includes/Head.ejs')%>
+<%- include('../includes/Navigation.ejs') %>
+<% if(orders.length<=0) {%>
+ <h1>No orders !</h1>
+ <%} else {%>
+      <% orders.forEach(product=>{%>
+        <h5>#<%=product.id%></h5>
+         <ul>
+         <%product.products.forEach(item=>{%>
+          <span><%=item.title%></span>
+          <span><%=item.orderItem.qty%></span>
+          <span><%=item.createdAt%></span>
+          <%})%>
+        </ul>
+        <%});%>
+  <%}%>
+<%- include('../includes/End.ejs') %>
